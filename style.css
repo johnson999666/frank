@@ -1,0 +1,52 @@
+
+body {
+  background-color: red;
+  margin: 0;
+  text-align: center;
+  justify-content: center;
+
+  font-family: cursive;
+  font-size: 200%;
+
+
+
+
+}
+
+
+.bottom-cloud {
+  position: relative;
+  bottom: 200px;
+  right: 150px
+
+
+}
+
+
+.top-cloud {
+  position: relative;
+  bottom: 300px;
+  right: 600px;
+}
+
+.profil {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+
+
+}
+img {
+  text-align: center;
+
+}
+
+h3 {
+  height: 100px;
+  width: 400px;
+}
+
+.skill {
+    height: 100px;
+    padding: 30px;
+}
