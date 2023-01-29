@@ -1,52 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.title h1{
+    font-size: 36px;
+    font-family: 'Lato', sans-serif;
+    margin-top:10em;
+    margin-left: auto;
+    margin-right:auto;
+    text-align: center;
 
-body {
-  background-color: red;
-  margin: 0;
-  text-align: center;
-  justify-content: center;
+    /* Stryling the text and giving it gradiant */
+    color:#ffffff;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
 
-  font-family: cursive;
-  font-size: 200%;
-
-
-
-
+    /* Make sure text is infront of background images */
+    display:block;
+    position: relative;
+    z-index: 3;
 }
 
-
-.bottom-cloud {
-  position: relative;
-  bottom: 200px;
-  right: 150px
-
-
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
 }
 
-
-.top-cloud {
-  position: relative;
-  bottom: 300px;
-  right: 600px;
+@keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
 }
 
-.profil {
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-
-
-}
-img {
-  text-align: center;
-
-}
-
-h3 {
-  height: 100px;
-  width: 400px;
+.stars, .twinkling, .clouds {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  display:block;
 }
 
-.skill {
-    height: 100px;
-    padding: 30px;
+.stars {
+  background:#000 url("https://raw.githubusercontent.com/Carla-Codes/starry-night-css-animation/master/stars.png") repeat top center;
+  z-index:0;
+}
+
+.twinkling{
+  background:transparent url("https://raw.githubusercontent.com/Carla-Codes/starry-night-css-animation/master/twinkling.png") repeat top center;
+  z-index:1;
+  animation:move-twink-back 200s linear infinite;
+}
+
+.clouds{
+    background:transparent url("https://raw.githubusercontent.com/Carla-Codes/starry-night-css-animation/master/clouds.png") repeat top center;
+    z-index:2;
+    opacity: .4;
+    animation:move-clouds-back 200s linear infinite;
 }
